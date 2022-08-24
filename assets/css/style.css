@@ -1,0 +1,20 @@
+@import url(./fonts.css);
+@import url(./reset.css);
+@import url(./root.css);
+@import url(./global-header.css);
+body {
+  font-family: "Inter";
+  background: var(--color-dark-10);
+  color: var(--color-dark-90);
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  height: 20000px !important;
+}
+body.fix {
+  position: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
