@@ -24,8 +24,7 @@ const searchTab = document.querySelector(".global-nav__search__tab"),
   ),
   sideModalContainer = document.querySelector(".side-modal-container"),
   sideModalBackdrop = document.querySelector(".side-modal-container .backdrop"),
-  sideModal = sideModalContainer.querySelector(".side-modal"),
-  searchBackdrop = document.querySelector(".search-backdrop");
+  sideModal = sideModalContainer.querySelector(".side-modal")
 
 // add Event Listener
 searchTab.addEventListener("click", () => {
@@ -33,7 +32,6 @@ searchTab.addEventListener("click", () => {
   globalNavPrimary.style.display = "none";
   globalNavSearch.classList.add("show");
   globalNavSearchWrapper.style.display = "block";
-  searchBackdrop.style.display = "block";
   searchInput.focus();
 });
 searchInput.addEventListener("input", () => {
@@ -47,15 +45,7 @@ searchInputRemoveIcon.addEventListener("click", () => {
   searchInput.value = "";
   searchInputRemoveIcon.style.display = "none";
 });
-searchBackdrop.addEventListener("click", () => {
-  searchBackdrop.style.display = "none";
-  searchTab.style.display = "block";
-  globalNavPrimary.style.display = "block";
-  globalNavSearch.classList.remove("show");
-  globalNavSearchWrapper.style.display = "none";
-  searchInput.value = "";
-  searchInputRemoveIcon.style.display = "none";
-});
+
 globalNavPrimaryProfileItem.addEventListener("click", () => {
   globalNavPrimaryMeContent.classList.toggle("show");
 });
@@ -84,3 +74,27 @@ sideModalBackdrop.addEventListener("click", ({ target }) => {
 //   }
 //   console.log(event.target);
 // });
+
+// sub header logic
+const globalMain = document.querySelector(".global-main"),
+  subHeaderNavigation = globalMain.querySelector(".sub-header-nav .navigation"),
+  subHeaderNavigationItem = [...subHeaderNavigation.children],
+  trackerLine = globalMain.querySelector(".tracker-line");
+
+subHeaderNavigationItem.forEach((item) => {
+  let ul = subHeaderNavigation.getBoundingClientRect();
+  let li = item.getBoundingClientRect();
+  item.addEventListener("click", ({ target }) => {
+    subHeaderNavigationItem.forEach((i) => {
+      i.classList.remove("active");
+    });
+    item.classList.add("active");
+  });
+  item.addEventListener("mouseover", () => {
+    trackerLine.style.width = `${li.width}px`;
+    trackerLine.style.left = li.left - ul.left + "px";
+  });
+  item.addEventListener("mouseleave", () => {
+    trackerLine.style.width = 0;
+  });
+});

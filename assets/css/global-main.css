@@ -1,0 +1,11 @@
+@import url(./sub-header.css);
+
+.global-main {
+  position: relative;
+  top: 60px;
+  width: calc(100vw - 17px);
+  height: 600px;
+  background: yellowgreen;
+  font-size: 1.3rem;
+  z-index: 10;
+}
