@@ -625,7 +625,7 @@ input[data-input="search"] {
 }
 
 /* media query */
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .global-nav__search__tab {
     display: block;
   }

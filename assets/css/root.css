@@ -34,6 +34,18 @@
   --text-secondary: #6e6e73;
   /* custom root  */
   --color-search-input: #5594d5;
+  --color-image-svg: #378fe9;
+  --color-image-svg-bk: hsl(210, 80%, 90%);
+  --color-image-svg-hover: hsl(210, 80%, 85%);
+  --color-video-svg: #12a52b;
+  --color-video-svg-bk: hsl(130, 80%, 87%);
+  --color-video-svg-hover: hsl(130, 80%, 82%);
+  --color-celendar-svg: #8437e9;
+  --color-celendar-svg-bk: hsl(266, 80%, 90%);
+  --color-celendar-svg-hover: hsl(266, 80%, 87%);
+  --color-document-svg: #e93746;
+  --color-document-svg-bk: hsl(355, 80%, 90%);
+  --color-document-svg-hover: hsl(355, 80%, 87%);
   --me-list__link: rgba(12, 101, 195, 0.1);
 }
 

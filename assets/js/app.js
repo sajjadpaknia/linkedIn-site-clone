@@ -24,7 +24,8 @@ const searchTab = document.querySelector(".global-nav__search__tab"),
   ),
   sideModalContainer = document.querySelector(".side-modal-container"),
   sideModalBackdrop = document.querySelector(".side-modal-container .backdrop"),
-  sideModal = sideModalContainer.querySelector(".side-modal")
+  sideModal = sideModalContainer.querySelector(".side-modal"),
+  sortPost = document.querySelector(".sort-post__content");
 
 // add Event Listener
 searchTab.addEventListener("click", () => {
@@ -96,5 +97,23 @@ subHeaderNavigationItem.forEach((item) => {
   });
   item.addEventListener("mouseleave", () => {
     trackerLine.style.width = 0;
+  });
+});
+
+const sortOptionsTitle = sortPost.querySelector(".sort-options__title");
+const sortPostDropdown = sortPost.querySelector(".sort-post-dropdown");
+const sortPostDropdownItems = [...sortPostDropdown.children];
+sortPost.addEventListener("click", () => {
+  sortPostDropdown.classList.toggle("active");
+});
+sortPostDropdownItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    sortPostDropdownItems.forEach((i) => {
+      i.classList.remove("active");
+    });
+    item.classList.add("active");
+    if (item.classList.contains("active")) {
+      sortOptionsTitle.innerHTML = item.innerHTML;
+    }
   });
 });

@@ -1,9 +1,11 @@
 .sub-header {
-  width: 100%;
+  position: fixed;
+  width: calc(100vw - 17px);
   height: 50px;
   background-color: rgb(255, 255, 255);
   padding-inline: 2rem;
   font-size: 1.3rem;
+  z-index: 1000;
 }
 .sub-header-nav {
   position: relative;
@@ -72,7 +74,7 @@
   -o-transition: left 0.3s, width 0.3s;
 }
 /* media query */
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .navigation {
     margin: 0 auto;
   }
