@@ -12,7 +12,7 @@ body {
   height: 20000px !important;
 }
 body.fix {
-  position: fixed;
+  overflow: hidden;
 }
 
 .container {
