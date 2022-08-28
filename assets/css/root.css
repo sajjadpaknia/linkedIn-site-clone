@@ -46,7 +46,10 @@
   --color-document-svg: #e93746;
   --color-document-svg-bk: hsl(355, 80%, 90%);
   --color-document-svg-hover: hsl(355, 80%, 87%);
-  --color-like-bk: #F12F61;
+  --color-like-bk: #f12f61;
+  --color-premium-bk-hover: hsl(42, 57%, 80%);
+  --color-premium-bk: hsl(42, 57%, 85%);
+  --color-premium: #c78627;
   --me-list__link: rgba(12, 101, 195, 0.1);
 }
 

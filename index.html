@@ -12,6 +12,18 @@
 
 <body>
     <svg style="display: none;">
+        <symbol id="bookmark-icon" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Iconly/Light/Bookmark" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g id="Bookmark" transform="translate(4.200000, 2.300000)" stroke-width="1.5">
+                    <path
+                        d="M15.5388471,3.85363409 C15.5388471,1.10275689 13.6581454,-2.13162821e-14 10.9503759,-2.13162821e-14 L4.5914787,-2.13162821e-14 C1.96691729,-2.13162821e-14 2.66453526e-15,1.02756892 2.66453526e-15,3.67017544 L2.66453526e-15,18.393985 C2.66453526e-15,19.1197995 0.780952381,19.5769424 1.41353383,19.2220551 L7.79548872,15.6421053 L14.1223058,19.2160401 C14.7558897,19.5729323 15.5388471,19.1157895 15.5388471,18.3889724 L15.5388471,3.85363409 Z"
+                        id="Stroke-1"></path>
+                    <line x1="4.071178" y1="6.72802013" x2="11.3894737" y2="6.72802013" id="Stroke-3"></line>
+                </g>
+            </g>
+        </symbol>
         <symbol id="more" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M16,13c-1.654,0-3,1.346-3,3s1.346,3,3,3s3-1.346,3-3S17.654,13,16,13z" id="XMLID_287_" />
@@ -990,7 +1002,44 @@
                     </ul>
                 </section>
             </section>
-            <aside class="aside-layout"></aside>
+            <aside class="aside-layout">
+                <section class="aside-profile">
+                    <a href="#" class="aside-profile__wrapper">
+                        <figure class="aside__header-img">
+                            <img src="./assets/images/picture/bk.jpg" alt="">
+                        </figure>
+                        <figure class="aside-profile__avatar">
+                            <img src="./assets/images/avatar/3.jpg" alt="">
+                        </figure>
+                        <div class="aside-profile__info">
+                            <h2 class="aside-profile__name">Robert D.</h2>
+                            <p class="aside-profile__job-title">Front-end developer
+                                - ReactJS
+                                / NextJS / NodeJS</p>
+                        </div>
+                    </a>
+                    <div class="aside-profile__interaction">
+                        <a href="#" class="aside-profile__view-profile">Who's viewed your profile
+                            <span class="aside-profile__interaction-counter">64</span>
+                        </a>
+                        <a href="#" class="aside-profile__post-impressions">Impressions of your post
+                            <span class="aside-profile__interaction-counter">724</span>
+                        </a>
+                        <div class="aside-profile__btn">
+                            <a href="#" class="center">Try premium for free</a>
+                        </div>
+                        <div class="bookmark">
+                            <a href="#" class="flex">
+                                <svg class="bookmark-icon">
+                                    <use xlink:href="#bookmark-icon"></use>
+                                </svg>
+                                <p class="bookmark__text">My items</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="aside-explore"></section>
+            </aside>
         </main>
     </main>
     <!-- <section class="adding-post-modal"></section> -->
