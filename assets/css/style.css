@@ -9,7 +9,6 @@ body {
   color: var(--color-dark-90);
   font-size: 1.4rem;
   overflow-x: hidden;
-  height: 20000px !important;
 }
 body.fix {
   overflow: hidden;

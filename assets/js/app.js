@@ -117,3 +117,15 @@ sortPostDropdownItems.forEach((item) => {
     }
   });
 });
+const likeIcon = document.querySelectorAll(".post__action-icon.like");
+const likeCounter = document.querySelectorAll(".action-counter.like");
+likeIcon.forEach((item, idx) => {
+  item.addEventListener("click", function () {
+    this.classList.toggle("active");
+    if (this.classList.contains("active")) {
+      likeCounter[idx].innerHTML = Number(likeCounter[idx].innerHTML) + 1;
+    } else {
+      likeCounter[idx].innerHTML = Number(likeCounter[idx].innerHTML) - 1;
+    }
+  });
+});
