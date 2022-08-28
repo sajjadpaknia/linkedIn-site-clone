@@ -2,12 +2,13 @@
   position: relative;
   display: grid;
   grid-template-columns: 5fr 2fr;
-  gap: 2rem;
+  padding-inline: 2rem;
 }
 /* content layout section  */
 .content-layout {
   height: 100%;
   background: var(--color-white);
+  border-right: 1px solid var(--color-dark-20);
 }
 .adding-post {
   width: 100%;
@@ -170,7 +171,6 @@
 /* posts section */
 .posts-container {
   width: 100%;
-  background-color: rgb(255, 150, 101);
 }
 
 .post {
@@ -247,7 +247,6 @@
 }
 .post__caption {
   width: 100%;
-  /* background-color: lightcoral; */
   margin-bottom: 1rem;
 }
 .post__caption__context {
@@ -322,13 +321,14 @@
 .aside-layout {
   position: sticky;
   top: 150px;
-  height: 580px;
-  background-color: rgb(0, 255, 242);
+  height: max-content;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
 }
 .aside-profile {
   width: 100%;
   height: 300px;
+  margin-bottom: 5rem;
 }
 .aside-profile__wrapper {
   width: 100%;
@@ -349,8 +349,10 @@
   height: 60px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
-  border: 3px solid var(--color-white);
+  background-color: red;
+  outline: 5px solid var(--color-white);
 }
+
 .aside-profile__info {
   width: 100%;
   padding-inline: 2rem;
@@ -435,7 +437,7 @@
   width: 100%;
   height: 20px;
 }
-.bookmark > a{
+.bookmark > a {
   width: max-content;
   height: 100%;
   padding-inline: 2rem;
@@ -447,6 +449,48 @@
 .bookmark__text {
   margin-inline-start: 0.5rem;
   flex-grow: 1;
+}
+.aside-explore {
+  width: 100%;
+  height: 200px;
+}
+.aside-explore__heading {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+.aside-explore__recent {
+  width: 100%;
+}
+.aside-explore__recent-item {
+  width: 100%;
+}
+.aside-explore__recent-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+.aside-explore__recent-link svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.aside-explore__recent-link__text {
+  display: block;
+  width: 100%;
+  padding-block: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-inline-start: 0.5rem;
+}
+
+.aside-explore__recent-link:hover {
+  background-color: var(--me-list__link);
 }
 /* media query */
 @media (max-width: 850px) {
@@ -509,6 +553,10 @@ symbol#document {
 #more {
   fill: var(--color-dark-80);
 }
-#bookmark-icon {
+#bookmark-icon,
+#group-icon {
   stroke: var(--color-dark-90);
+}
+#hashtag {
+  fill: var(--color-dark-70);
 }

@@ -1,5 +1,5 @@
 body.fix .global-header {
-  width: calc(100% - 17px);
+  width: calc(100% - 19px);
 }
 .global-header {
   position: fixed;

@@ -5,9 +5,8 @@
   position: relative;
   top: 60px;
   width: calc(100vw - 17px);
-  background: yellowgreen;
+  background: rgb(255, 255, 255);
   font-size: 1.3rem;
   z-index: 10;
   padding-top: 9rem;
-  padding-inline: 2rem;
 }
