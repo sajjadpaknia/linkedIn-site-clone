@@ -1,9 +1,6 @@
-body.fix .global-header {
-  width: calc(100% - 19px);
-}
 .global-header {
   position: fixed;
-  width: 100%;
+  width: calc(100vw - 17px);
   height: 60px;
   padding-inline: 2rem;
   background: var(--color-primary);
@@ -640,6 +637,9 @@ input[data-input="search"] {
   }
   .global-nav__search {
     padding-left: 0;
+  }
+  .global-header {
+    width: 100%;
   }
 }
 @media (max-width: 350px) {
